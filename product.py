@@ -1,3 +1,9 @@
+##############################
+# Author: TheNanoMachi       #
+# Date Written: 2021/05/09   #
+# Title: Russian Roulette    #
+##############################
+
 from tkinter import *
 import random
 
