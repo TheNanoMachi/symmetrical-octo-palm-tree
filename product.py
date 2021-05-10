@@ -8,7 +8,7 @@ from tkinter import *
 import random
 
 root = Tk()
-root.geometry("450x300")
+root.geometry("1333x1000")
 root.title(" Russian Roulette ")
 
 cyl = []
@@ -47,13 +47,13 @@ def spincylinder(cylinder, cylinderArray):
     if r == 0:
         Output.insert(END, " You Died. You Survived "+str(rounds + 1)+" rounds.")
         print("You Died. You Survived "+str(rounds + 1)+" rounds.")
+        #root.after(3000, Output.delete("1.0", END))
+        Output.insert(END, "\n"+" Keep Playing?")
         rounds = 0
-        raise SystemExit
         return True
     else:
         rounds += 1
         Output.insert(END, " You Survived")
-        return False
 
 img = PhotoImage(file = "rollthedice.png")
 
@@ -115,3 +115,4 @@ SpinButton.pack()
 l4.pack()
 QuitButton.pack()
 mainloop()
+exitvar = input("Press any key to exit: ")
